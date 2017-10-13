@@ -3,7 +3,7 @@
 == Data Structures
 
 <<oggpack_buffer.adoc#, oggpack_buffer>> +
-<<ogg_page.adoc, ogg_page>> +
-<<ogg_stream_state.adoc, ogg_stream_state>> +
-<<ogg_packet.adoc, ogg_packet>> +
-<<ogg_sync_state.adoc, ogg_sync_state>>
+<<ogg_page.adoc#, ogg_page>> +
+<<ogg_stream_state.adoc#, ogg_stream_state>> +
+<<ogg_packet.adoc#, ogg_packet>> +
+<<ogg_sync_state.adoc#, ogg_sync_state>>
