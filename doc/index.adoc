@@ -1,0 +1,9 @@
+= Libogg Documentation
+
+Libogg contains necessary functionality to create, decode, and work with Ogg bitstreams.
+
+This document explains how to use the libogg API in detail.
+
+<<overview.adoc, libogg api overview>>
+
+<<reference.adoc, libogg api reference>>
