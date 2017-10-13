@@ -1,0 +1,34 @@
+= ogg_packet
+
+_declared in "ogg/ogg.h"_
+
+The ogg_packet struct encapsulates the data for a single raw packet of data and is used to transfer data between the ogg framing layer and the handling codec.
+
+[source,c]
+----
+typedef struct {
+  unsigned char *packet;
+  long  bytes;
+  long  b_o_s;
+  long  e_o_s;
+
+  ogg_int64_t  granulepos;
+  ogg_int64_t  packetno; 
+
+} ogg_packet;
+----
+
+== Relevant Struct Members
+
+`packet`::
+Pointer to the packet's data. This is treated as an opaque type by the ogg layer.
+`bytes`::
+Indicates the size of the packet data in bytes. Packets can be of arbitrary size.
+`b_o_s`::
+Flag indicating whether this packet begins a logical bitstream. 1 indicates this is the first packet, 0 indicates any other position in the stream.
+`e_o_s`::
+Flag indicating whether this packet ends a bitstream. 1 indicates the last packet, 0 indicates any other position in the stream.
+`granulepos`::
+A number indicating the position of this packet in the decoded data. This is the last sample, frame or other unit of information ('granule') that can be completely decoded from this packet.
+`packetno`::
+Sequential number of this packet in the ogg bitstream.
