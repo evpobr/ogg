@@ -1,0 +1,29 @@
+= oggpack_buffer
+
+[source,c]
+----
+declared in "ogg/ogg.h"
+----
+
+The oggpack_buffer struct is used with libogg's bitpacking functions. You should never need to directly access anything in this structure.
+
+[source,c]
+----
+typedef struct {
+  long endbyte;
+  int  endbit;
+
+  unsigned char *buffer;
+  unsigned char *ptr;
+  long storage;
+} oggpack_buffer;
+----
+
+== Relevant Struct Members
+
+buffer::
+Pointer to data being manipulated.
+ptr::
+Location pointer to mark which data has been read.
+storage::
+Size of buffer.
